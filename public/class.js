@@ -33,4 +33,23 @@ class glxavor {
         return found;
 
     }
+
+    sharjvel(a) {
+        var datarkVandakner = this.yntrelVandak(0);
+        var norVandak = random(datarkVandakner);
+
+        if (norVandak) {
+            this.mernelukyanq--;
+            matrix[this.y][this.x] = 0;
+            matrix[norVandak[1]][norVandak[0]] = a;
+
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+        }
+        if (this.mernelukyanq <= 0) {
+            this.mernel();
+        }
+
+
+    }
 }

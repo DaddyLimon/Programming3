@@ -1,4 +1,4 @@
-class Grass {
+class Grass extends glxavor{
     constructor(x, y) {
         super(x,y);
         this.multiply = 0;
