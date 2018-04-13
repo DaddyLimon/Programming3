@@ -5,6 +5,24 @@ class Xotaker extends glxavor {
         this.mernelukyanq = 5;
     }
 
+    sharjvel() {
+        var datarkVandakner = this.yntrelVandak(0);
+        var norVandak = random(datarkVandakner);
+
+        if (norVandak) {
+            this.mernelukyanq--;
+            matrix[this.y][this.x] = 0;
+            matrix[norVandak[1]][norVandak[0]] = 2;
+
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+        }
+        if (this.mernelukyanq <= 0) {
+            this.mernel();
+        }
+
+    }
+
 
     utel() {
         var datarkVandakner = this.yntrelVandak(1);
@@ -27,7 +45,7 @@ class Xotaker extends glxavor {
             }
         }
         else {
-            this.sharjvel(2);
+            this.sharjvel();
         }
         if (this.kyanq >= 10) {
             this.bazmanal();

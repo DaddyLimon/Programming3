@@ -11,7 +11,22 @@ class XotaGishatich extends glxavor {
             [this.x + 2, this.y + 2]
         ];
     }
+sharjvel() {
+        var datarkVandakner = this.yntrelVandak(0);
+        var norVandak = random(datarkVandakner);
 
+        if (norVandak) {
+            this.mernelukyanq--;
+            matrix[this.y][this.x] = 0;
+            matrix[norVandak[1]][norVandak[0]] = 4;
+
+            this.x = norVandak[0];
+            this.y = norVandak[1];
+        }
+        if (this.mernelukyanq <= 0) {
+            this.mernel();
+        }
+    }
 
     utel() {
         var datarkVandakner = this.yntrelVandak(3);
@@ -52,7 +67,7 @@ class XotaGishatich extends glxavor {
             }
         }
         else {
-            this.sharjvel(4);
+            this.sharjvel();
         }
         if (this.kyanq >= 1) {
             this.bazmanal();
